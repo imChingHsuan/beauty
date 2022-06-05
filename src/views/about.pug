@@ -1,0 +1,109 @@
+extends ./layouts/_base.pug
+
+block page
+  - const page = 'about';
+
+block content
+  section.section1
+    .container
+      .content(data-sticky-container='data-sticky-container')
+        .sticky-box(data-sticky='data-sticky' data-sticky-top='20' data-sticky-for='550')
+          span Sticky Object
+        ._articleBlock
+          article._article(img-row='x4')
+            ._contentWrap
+              h4._H
+                | This is the title of the Article, A satirical title generator for
+                | designers...
+              ._imgCover
+                ._cover
+                  ._photo
+                    img.lazy(data-src='https://i.imgur.com/76qUR5C.jpg' alt='')
+                  p._description Description
+                ._cover
+                  ._photo
+                    img.lazy(data-src='https://i.imgur.com/4JXob31.jpg' alt='')
+                  p._description Description
+                ._cover
+                  ._photo
+                    img.lazy(data-src='https://i.imgur.com/Vtxqm43.jpg' alt='')
+                  p._description Description
+                ._cover
+                  ._photo
+                    img.lazy(data-src='https://i.imgur.com/a0tb3Wr.jpg' alt='')
+                  p._description Description
+              ._wordCover
+                h5._subH
+                  | Sub-Title of the Article, A satirical title generator for designers...
+                ._P
+                  p
+                    | What would the museum in your imagination look like? It&apos;s a good
+                    | idea to build your favorite museum in Mondo Museum, whether it&apos;s to
+                    | be displayed in a sub-category, or to show it all at once and make a
+                    | sensation in the world. The museum simulator&quot;Mondo Museum&quot; is
+                    | a game that tests the player&apos;s ability to manage. You can freely
+                    | design the structure of the museum, from the planning of the exhibition
+                    | hall to the location of the gift shop, laying different floors for each
+                    | room, setting windows, and of course matching Create a first class
+                    | museum on the wallpaper.
+                  span._buttonCover
+                    a._button(href='javascript:;') Button Description
+          article._article(swiper-num='1' swiper-arrow='on')
+            ._contentWrap
+              h4._H
+                | This is the title of the Article, A satirical title generator for
+                | designers...
+              ._imgCover
+                .swiper
+                  .swiper-wrapper
+                    ._cover.swiper-slide
+                      ._photo
+                        img(src='https://i.imgur.com/d5O5GPt.jpg' alt='')
+                      p._description Description
+                    ._cover.swiper-slide
+                      ._photo
+                        img(src='https://i.imgur.com/16916D8.jpg' alt='')
+                      p._description Description
+                .swiper-button-cover
+              ._wordCover
+                h5._subH
+                  | Sub-Title of the Article, A satirical title generator for designers...
+                ._P
+                  p
+                    | What would the museum in your imagination look like? It&apos;s a good
+                    | idea to build your favorite museum in Mondo Museum, whether it&apos;s to
+                    | be displayed in a sub-category, or to show it all at once and make a
+                    | sensation in the world. The museum simulator&quot;Mondo Museum&quot; is
+                    | a game that tests the player&apos;s ability to manage. You can freely
+                    | design the structure of the museum, from the planning of the exhibition
+                    | hall to the location of the gift shop, laying different floors for each
+                    | room, setting windows, and of course matching Create a first class
+                    | museum on the wallpaper.
+                  span._buttonCover
+                    a._button(href='javascript:;') Button Description
+          article._article.typeSR
+            ._contentWrap
+              h4._H
+                | This is the title of the Article, A satirical title generator for
+                | designers...
+              ._imgCover
+                ._cover
+                  ._photo
+                    img.lazy(data-src='https://i.imgur.com/16916D8.jpg' alt='')
+                  p._description Description
+              ._wordCover
+                h5._subH
+                  | Sub-Title of the Article, A satirical title generator for designers...
+                ._P
+                  p
+                    | What would the museum in your imagination look like? It&apos;s a good
+                    | idea to build your favorite museum in Mondo Museum, whether it&apos;s to
+                    | be displayed in a sub-category, or to show it all at once and make a
+                    | sensation in the world. The museum simulator&quot;Mondo Museum&quot; is
+                    | a game that tests the player&apos;s ability to manage. You can freely
+                    | design the structure of the museum, from the planning of the exhibition
+                    | hall to the location of the gift shop, laying different floors for each
+                    | room, setting windows, and of course matching Create a first class
+                    | museum on the wallpaper.
+                  span._buttonCover
+                    a._button(href='javascript:;') Button Description

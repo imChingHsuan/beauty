@@ -1,0 +1,436 @@
+extends ./layouts/_base.pug
+
+block page
+  - const page = 'index';
+
+block content
+  section.banner 
+    .bannerContainer
+      .swiper.bannerSwiper
+        .swiper-wrapper 
+          .swiper-slide 
+            .inner(data-align="center-left")
+              img.swiper-lazy(data-src='./assets/img/banner1.jpeg')
+              .bannerContent1
+                h2 Find your way
+                h4 從內而外展現自我
+          .swiper-slide
+            .inner(data-align="center-center")
+              img.swiper-lazy(data-src='./assets/img/banner2.jpeg')
+              .bannerContent2
+                h2 Find your way
+                h4 從內而外展現自我
+          .swiper-slide 
+            .inner(data-align="center-right")
+              img.swiper-lazy(data-src='./assets/img/banner3.jpeg')
+              .bannerContent3 
+                h2 Find your way
+                h4 從內而外展現自我
+          .swiper-slide 
+            .inner(data-align="bottom-left")
+              img.swiper-lazy(data-src='./assets/img/banner4.jpeg')
+              .bannerContent4 
+                h2 Find your way
+                h4 從內而外展現自我
+          .swiper-slide 
+            .inner(data-align="bottom-center")
+              img.swiper-lazy(data-src='./assets/img/banner5.jpeg')
+              .bannerContent5 
+                h2 Find your way
+                h4 從內而外展現自我
+          .swiper-slide 
+            .inner(data-align="bottom-right")
+              img.swiper-lazy(data-src='./assets/img/banner6.jpeg')
+              .bannerContent6 
+                h2 Find your way
+                h4 從內而外展現自我
+        .swiper-pagination
+    .scroll
+      p SCROLL
+      span    
+  
+  section.news 
+    a.newsLeft(href="javascript:;")
+      .newsLeftContainer
+        .newsLeftLeft
+          h4 活動/優惠，不容錯過
+          h4.newsLeftText Latest News
+        .newsLeftRight
+          .newsDate 
+            p.newsDay 25
+            p.newsMonth Jan 
+          .newsContent 優惠促銷 - 不用 5 倍的價格，也能買到營養價值 5 倍的好商品！
+          .moreBtn More
+    a.newsRight(href="javascript:;")
+      .newsRightContainer
+        .newsRightLeft
+          p.icon-address
+        .newsRightCenter
+          h4 尋找據點
+          h4.newsRightText Find A Location
+        .newsRightRight
+          p.icon-arrow-right  
+          
+  section.course  
+    .courseContainer 
+      .courseLeft 
+        .bg-wrap
+          img.bg1.lazy(data-src="./assets/img/course-swiper1.jpeg")
+          img.bg2.lazy(data-src="./assets/img/course-swiper2.jpeg")
+          img.bg3.lazy(data-src="./assets/img/course-swiper3.jpeg")
+        .couseSwiper
+          .swiper
+            .swiper-wrapper
+              .swiper-slide
+                .inner
+                  h4 Quality
+                  p 擁有專業的研發團隊
+              .swiper-slide
+                .inner
+                  h4 Price
+                  p 擁有合理的價格
+              .swiper-slide
+                .inner
+                  h4 Service
+                  p 擁有貼心的服務
+      .courseRight 
+        .courseRightContainer 
+          .courseTop
+            h3 Personal Project
+            h5 選擇你的第一個專屬方案！
+            p 很多人熱愛美麗， 卻擔心自己沒經驗，如果你有這樣的想法，就來到這裡吧！
+          .category-course
+            .category-slider
+              .wrapper
+                .item.active
+                  a.category(href="javascript:;") 散發美麗
+                .item
+                  a.category(href="javascript:;") 改善體態
+                .item
+                  a.category(href="javascript:;") 重建自信
+                .item
+                  a.category(href="javascript:;") 輕微調整
+          .courseButtom
+            .courseBtn
+              p.courseBtn More
+      .courseButtomRWD
+        .courseBtn
+          p.courseBtn More
+  
+  section.course2 
+    .container
+      .course2Left 
+        .leftbox
+          .course2leftTop 
+            h4 Get moving!<br/>Beauty
+            h5 尋找適合你的專屬課程
+            h6 不要先入為主覺得優惠很複雜，實際上，優惠可能比你想的還要更簡單。儘管如此，別人往往卻不這麼想。
+          .category-course2
+            .category-slider
+              .wrapper
+                .item.active
+                  a.category(href="javascript:;") 新手入門
+                .item
+                  a.category(href="javascript:;") 愛美熟女
+                .item
+                  a.category(href="javascript:;") 散發自信
+          .courseBtn 
+            p More
+      .course2right
+        .rightbox
+          .imgContainer
+            a(href="javascript:;") 
+              .imgbox
+                .imgWrap
+                  img.lazy(data-src="./assets/img/course2-1.jpeg")
+              .imgText
+                h4 beauty
+                p 美麗專區
+          .imgContainer
+            a(href="javascript:;") 
+              .imgbox
+                .imgWrap
+                  img.lazy(data-src="./assets/img/course2-2.jpeg")
+              .imgText
+                h4 rebuild confidence
+                p 重建自信
+          .imgContainer
+            a(href="javascript:;") 
+              .imgbox
+                .imgWrap
+                  img.lazy(data-src="./assets/img/course2-3.jpeg")
+              .imgText
+                h4 shape your body
+                p 改善體態
+          .imgContainer 
+            a(href="javascript:;") 
+              .imgbox
+                .imgWrap
+                  img.lazy(data-src="./assets/img/course2-4.jpeg")
+              .imgText
+                h4 lady only
+                p  熟女專區
+      .courseBtnRWD 
+          p More      
+  
+  section.article
+    .container 
+      .articleTop  
+        .left
+          h4 Beauty Knowledge
+        .center 
+          .centerTop 
+            h5 讓專業的來！用正確的觀點重新定義
+            p 對美麗進行深入研究，足以改變人類的歷史。
+          .centerButtom
+            .category-article
+              .category-slider
+                .wrapper
+                  .item.active
+                    a.category(href="javascript:;") 重建自信
+                  .item
+                    a.category(href="javascript:;") 美麗專區
+                  .item
+                    a.category(href="javascript:;") 重建自信
+                  .item
+                    a.category(href="javascript:;") 美麗專區
+        .right                                             
+          .moreBtn 
+            p More
+      .articleButtom
+        .left
+          .topArticle
+            .articleContainer
+              a.imgContainer(href="javascript:;")
+                .imgBox
+                  .imgWrap
+                    img.articalImg(src="./assets/img/article1.jpeg")
+                  .hoverText
+                    .hoverWrap
+                      h4 Title
+                      p 俗話說的好，掌握思考過程，也就掌握了美麗
+                .textContainer
+                  .text(data-align="left")
+                  .text(data-align="center")
+                    p 美麗關鍵
+                    .viewed 
+                      p Viewed
+                      p 765
+                  .text(data-align="right") 
+              .articalTitle 
+                h4 這把視野帶到了全新的高度。
+              .classification
+                .textbox
+                  .inner 
+                    h6 Classification
+                    p 美麗關鍵
+                  .viewNum
+                    h6 Viewed
+                    p 765  
+          .buttomArticle
+            .articleContainer
+              a.imgContainer(href="javascript:;")
+                .imgBox
+                  .imgWrap
+                    img.articalImg(src="./assets/img/article2.jpeg")
+                  .hoverText
+                    .hoverWrap
+                      h4 Title
+                      p 這把視野帶到了全新的高度。過去的錯誤的學說不宜忘掉不談，因為各種真理都要在和錯誤鬥爭之中。
+                .textContainer
+                  .text(data-align="left")
+                    p 
+                  .text(data-align="center")
+                    p 
+                  .text(data-align="right")
+                    p 自信關鍵 
+                    .viewed 
+                      p Viewed
+                      p 765
+              .articalTitle 
+                h4 美麗絕對是史無前例的
+              .classification
+                .textbox
+                  .inner 
+                    h6 Classification
+                    p 自信關鍵
+                  .viewNum
+                    h6 Viewed
+                    p 765                
+        .right
+          .articalContainer
+            a.imgContainer(href="javascript:;")
+              .imgBox
+                .imgWrap
+                  img.articalImg(src="./assets/img/article3.jpeg")
+                .hoverText
+                  .hoverWrap
+                    h4 Title
+                    p 對我個人而言，美麗不僅僅是一個重大的事件，還可能會改變我的人生。
+                    .playBtn 
+                      p.icon-play_icon 
+                      p play video
+              .viewed 
+                .viewedBox
+                  h5 1258
+                  p viewed 
+            .titleContainer
+              .articalTitle 
+                h4 所謂美麗，關鍵是美麗需要如何解讀。
+              .classification
+                h6 Classification
+                p 新手入門
+      .moreBtnRWD
+        p More
+
+  section.shop
+    .container 
+      .left
+        .leftContainer
+          a.imgContainer(href="javascript:;")
+            .imgWrap
+              .imgbox
+                img.lazy(data-src="./assets/img/shop1.jpeg") 
+            .contentContainer
+              .leftContainer(data-align="left")
+                h4.en-title Online Store
+                h4.ch-title 美麗專區
+                p 這邊可以放簡述文字，限制兩行，也可隱藏文字....
+                p.plusBtn +
+                
+      .center
+        .centerContainer
+          a.imgContainer(href="javascript:;")
+            .imgWrap
+              .imgbox
+                img.lazy(data-src="./assets/img/shop2.jpeg") 
+            .contentContainer
+              .centerContainer(data-align="center")
+                h4.en-title Online Store
+                h4.ch-title 
+                p 這邊可以放簡述文字，限制兩行，也可隱藏文字....
+                p.plusBtn +
+      .right
+        .rightContainer
+          a.imgContainer(href="javascript:;")
+            .imgWrap
+              .imgbox
+                img.lazy(data-src="./assets/img/shop3.jpeg") 
+            .contentContainer
+              .rightContainer(data-align="right")
+                h4.en-title Online Store
+                h4.ch-title 自信專區
+                p 這邊可以放簡述文字，限制兩行，也可隱藏文字....
+                p.plusBtn +
+
+  section.location
+    .section-bg
+    .container
+      .innerContainer
+        .left 
+          .content
+            .header 
+              h5 23
+            .title 
+              p.memberNum 15,728
+              p 在任何地方都可以變美，尋找離你最近的據點
+            .text
+              p 我們不妨可以這樣來想: 話雖如此，我們卻也不能夠這麼篤定。世界需要改革，需要對美麗有新的認知。對於一般人來說，美麗究竟象徵著什麼呢？我們不得不面對一個非常尷尬的事實，那就是，儘管美麗看似不顯眼，卻佔據了我的腦海。在人生的歷程中，美麗的出現是必然的。美麗對我來說，已經成為了我生活的一部分。由於，做好美麗這件事，可以說已經成為了全民運動。
+            .selectContainer 
+              form.wdd-form
+                .form-row
+                  .form-grid
+                    .form-group.required
+                      .form-select.city(form-field="placeA" field-type="isSelect" data-default="請選擇縣/市" select-type="single")
+                        .selected 縣市
+                        span.arrow-icon
+                        .dropdown
+                          .dropdown-scrollbar(data-scrollbar-content="")
+                            ul
+                      .form-select.dist.disabled(form-field="placeB" field-type="isSelect" data-default="請選擇地區" select-type="single")
+                        .selected 市區
+                        span.arrow-icon
+                        .dropdown
+                          .dropdown-scrollbar(data-scrollbar-content="")
+                            ul
+              .search 
+                p.icon-searcher 
+        .right
+          .content 
+            h5 Coming Soon
+            // 時間格式 yyyy-mm-ddThh:mm:ss (日期與時間中間要加T)
+            .countDown(data-countdown="2022-06-10T00:00:00") 
+              .day 
+                .text 
+                  h4#countDay  
+                  p Day 
+              .hours 
+                .text
+                  h4#countHour
+                  p Hours
+              .min 
+                .text
+                  h4#countMin 
+                  p Min
+              .sec 
+                .text
+                  h4#countSec 
+                  p Sec
+          .spotInfo
+            .spotName 台北 101
+            .address 
+              p 台北市信義路五段7號
+              p +886 2 27194922
+          .category-spot
+            .swiper.spotSwiper
+              .swiper-wrapper
+                .swiper-slide.active
+                  a.item(href="javascript:;")
+                    p.top Coming Soon
+                    p 台北 信義店
+                .swiper-slide
+                  a.item(href="javascript:;")
+                    p.top 2.29 開始預售
+                    p 台北 大安店
+                .swiper-slide
+                  a.item(href="javascript:;")
+                    p.top Coming Soon
+                    p 台中 美村店
+                .swiper-slide
+                  a.item(href="javascript:;")
+                    p.top Coming Soon
+                    p 桃園 林口店
+                .swiper-slide
+                  a.item(href="javascript:;")
+                    p.top Coming Soon
+                    p 高雄 漢神店
+          .spot-pagination
+
+  section.promotion 
+    .container
+      .left 
+        .leftbox
+          .date
+            h4 14
+            h6 DAY 
+          .trail
+              h4 Free Trial
+              h5 14天免費美麗體驗
+              p 擁有各式頂級方案。我們一起來審視美麗。對美麗進行深入研究！
+              a(href="javascript:;") 立即索取免費體驗資格 
+      .right  
+        .rightbox
+          .text-box 
+            h4 Download
+            h5 APP
+          .content
+            .text
+              h5 會員專屬APP，讓你隨時掌握
+              p 提供會員們最便利的全方位 app，完整紀錄每日的運動訓練細節、飲食內容、身體數據變化
+              a(href="javascript:;") 前往下載APP
+            .download 
+              .imgbox
+                img.lazy(data-src="./assets/img/page8-3.png")
+              .imgbox
+                img.lazy(data-src="./assets/img/page8-2.png")
+

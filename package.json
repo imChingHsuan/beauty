@@ -1,0 +1,13 @@
+{
+  "name": "f2e-framework-prepros",
+  "version": "1.0.0",
+  "description": "This is a dummy package.json file created by Prepros to manage packages with NPM. You can edit this file to add your own information.",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "flatpickr": "^4.6.9",
+    "overlayscrollbars": "^1.13.1",
+    "swiper": "^7.4.1",
+    "tua-body-scroll-lock": "^1.2.1",
+    "vanilla-lazyload": "^17.5.0"
+  }
+}

@@ -1,0 +1,41 @@
+$A_Z: ["A","B","C","D","E","F","G,","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+
+.number-grow
+	display: flex
+	align-items: flex-start
+	text-align: center
+	height: 100%
+	&.active
+		.num
+			> div
+				transition: transform 1.5s cubic-bezier(0.1, 0.66, 0.22, 1)
+		@for $num from 0 through 9
+			.num[data-final-num="#{$num}"]
+				> div
+					transform: translateY(calc(-50% - (100% / 22 * #{$num+1})))
+		.comma
+			opacity: 1
+			transition: 0.2s linear 1.5s
+	.num
+		height: 100%
+		overflow: hidden
+	.comma
+		opacity: 0
+
+.letter-grow
+	display: flex
+	align-items: flex-start
+	text-align: center
+	height: 100%
+	&.active
+		.letter
+			> div
+				transition: transform 1.5s cubic-bezier(0.1, 0.66, 0.22, 1)
+		@each $letter in $A_Z
+			$i: index($A_Z, $letter)
+			.letter[data-final-letter="#{$letter}"]
+				> div
+					transform: translateY(calc(-50% - (100% / 54 * #{$i})))
+	.letter
+		height: 100%
+		overflow: hidden

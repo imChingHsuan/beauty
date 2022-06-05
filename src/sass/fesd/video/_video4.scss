@@ -1,0 +1,207 @@
+////////////////////////////////////////////////////////////////////////////
+//
+//  WDD video4 2.0 Scss
+//  version: 2.0
+//  Update: 2020.04.01
+//  Last Coding: Wade, 2020.04.01
+//
+////////////////////////////////////////////////////////////////////////////
+
+.video4-cover {
+  &.onPage {
+    position: relative;
+    padding-bottom: 56.25% !important;
+    width: 100% !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    img {
+      height: auto !important;
+      padding: 0;
+      margin-top: 0.05rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &.onBox {
+    position: relative;
+    cursor: pointer;
+  }
+  ._videoPlayButton,
+  .playButton {
+    content: '';
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
+    min-width: auto !important;
+    min-height: auto !important;
+    width: 40px !important;
+    height: 40px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 50%;
+    background-color: #a0a0a0;
+    opacity: 1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transition: 0.5s;
+    transform: translate(-50%, -50%);
+    &:before {
+      content: '';
+      width: 0;
+      height: 0;
+      margin-right: -3px;
+      border-style: solid;
+      border-width: 6px 0 6px 8px;
+      border-color: transparent transparent transparent #ffffff;
+    }
+  }
+  ._videoOverlay,
+  .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.5;
+    transition: 0.5s;
+  }
+  &:hover {
+    ._videoPlayButton,
+    .playButton {
+      background-color: rgb(190, 190, 190);
+    }
+    ._videoOverlay,
+    .overlay {
+      opacity: 0.8;
+    }
+  }
+  &.onPage {
+    iframe {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+  }
+}
+
+/////////////////////////////////////////////////////////
+.video4-player {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.5s;
+  .coverWrap {
+    display: table-cell;
+    vertical-align: middle;
+    max-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+    padding: 80px 0;
+    .playerCover {
+      position: relative;
+      display: block;
+      width: 80%;
+      max-width: 1280px;
+      background-color: #000;
+      margin: 0 auto;
+      transition: 0.5s;
+      .player {
+        width: 100%;
+        height: 0;
+        display: block;
+        position: relative;
+        padding-bottom: 56.25%;
+        iframe {
+          font-size: 0;
+          line-height: 0;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          padding: 0;
+          margin: 0;
+          border: none;
+          top: 0;
+          left: 0;
+          bottom: auto;
+          right: auto;
+          z-index: 10;
+        }
+      }
+      .closeButton {
+        width: 30px;
+        height: 30px;
+        background-image: none;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: -30px;
+        bottom: auto;
+        right: -30px;
+        left: auto;
+        z-index: 10;
+        &:before {
+          // 2020.01.12
+          content: '';
+          width: 3px;
+          height: 20px;
+          background-color: #fff;
+          transform: rotate(45deg);
+          position: absolute;
+        }
+
+        &:after {
+          // 2020.01.12
+          content: '';
+          width: 3px;
+          height: 20px;
+          background-color: #fff;
+          transform: rotate(-45deg);
+          position: absolute;
+        }
+      }
+    }
+  }
+  &.active {
+    display: block;
+  }
+  &.open {
+    opacity: 1;
+  }
+}
+
+/////////////////////////////////////////////////////////
+.video4FixedBody {
+  overflow: hidden;
+}

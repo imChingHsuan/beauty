@@ -1,0 +1,142 @@
+nav.main-nav
+  position: fixed
+  width: 100%
+  top: 0
+  z-index: 2 
+  padding-top: 20px
+  transition: padding .4s
+  &.navfix
+    padding-top: 0
+    background-color: #fff   
+  .navContainer
+    max-width: 1680px
+    margin: 0 auto
+    font-family: $Basic
+    display: flex
+    align-items: center
+    justify-content: space-between 
+    height: 80px
+    width: 90% 
+    &.navfix
+      +rwdmax(767)
+        height: 70px
+    .navLeft 
+      display: flex
+      align-items: center    
+      a.icon-language
+        height: 17px
+        transition: color 0.3s
+        &:hover
+          color: $dark-green
+      a.icon-searcher
+        height: 17px
+        margin-left: 20px
+        transition: color 0.3s
+        +rwdmax(1300) 
+          margin-left: 20px
+        +rwdmax(576)
+          margin-left: 15px
+        &:hover
+          color: $dark-green
+      .navBorder
+        border-left: 2px solid $dark-green
+        width: 10px
+        height: 16px
+        margin-left: 25px
+        +rwdmax(1300) 
+          display: none
+      .navMember  
+        margin-left: 20px
+        +rwdmax(1300) 
+          margin-left: 20px
+        +rwdmax(576)
+          margin-left: 15px
+        a.icon-member
+          font-size: px(16)
+          transition: color 0.3s
+          +rwdmax(1300) 
+            display: block
+          +rwdmax(1300) 
+            margin-left: 0
+        &:hover
+          color: $dark-green
+        a
+          font-weight: 500
+          margin-left: 5px
+          font-size: px(14)
+          &.text
+            +rwdmax(1300) 
+              display: none                  
+      a.navclass
+        font-weight: 500
+        margin-left: 20px
+        font-size: px(14)
+        line-height: 21px
+        transition: color 0.3s
+        &:hover
+          color: $dark-green
+        +rwdmax(1300) 
+          display: none       
+      a.navReservation
+        font-weight: 500
+        font-size: px(14)
+        line-height: 21px
+        margin-left: 20px 
+        transition: color 0.3s
+        &:hover
+          color: $dark-green  
+        +rwdmax(1300) 
+          display: none     
+    .navRight
+      display: flex
+      align-items: center         
+      a.navleft01
+        font-size: px(14)
+        font-weight: 500
+        transition: color 0.3s
+        &:hover
+          color: $dark-green
+        +rwdmax(1900)
+          display: none        
+      a.navleft02
+        font-size: px(14)
+        font-weight: 500
+        margin-left: px(29)
+        transition: color 0.3s
+        &:hover
+          color: $dark-green
+        +rwdmax(1900)
+          display: none        
+      a.navleft03
+        font-size: px(14)
+        font-weight: 500
+        margin-left: px(29)
+        transition: color 0.3s
+        &:hover
+          color: $dark-green
+        +rwdmax(1900)
+          display: none       
+      .navMenu
+        margin-left: px(29)
+        +commonBtn(50px, 50px)       
+        .menuBorder1
+          width: 18px
+          height: 1px
+          border-bottom: 2px solid #000
+          border-radius: 2px
+          position: absolute
+          transform: translate(18px, 16px)
+        .menuBorder2
+          width: 18px
+          height: 1px
+          border-bottom: 2px solid #000
+          border-radius: 2px
+          position: absolute
+          transform: translate(13px, 22px)
+        .menuBorder3
+          width: 18px
+          height: 1px
+          border-bottom: 2px solid #000
+          border-radius: 2px
+          position: absolute
+          transform: translate(18px, 28px)

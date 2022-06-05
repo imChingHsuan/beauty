@@ -1,0 +1,1706 @@
+@import ../base/_variable
+@import ../base/_mixin
+//表單樣式 form
+@import ../layouts/form/_form
+
+
+@keyframes scrollBtn
+  0%
+    top: 0
+  50%
+    top: calc( 100% + 30px )
+  100%
+    top: calc( 100% + 30px )
+    
+
+section.banner
+  height: 100vh
+  padding-bottom: 100vh
+  position: relative
+  .bannerContainer
+    width: 100%
+    height: 100%
+    position: absolute 
+    .swiper
+      .inner
+        width: 100%
+        height: 100%
+      .inner>img 
+        width: 100%
+        height: 100%
+        object-fit: cover
+      .swiper-pagination
+        top: 50%
+        right: 6.25%
+        left: auto
+        transform: translateY(-50%)
+        width: 10px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        +rwdmax(550)
+          bottom: 3%
+          left: 105px
+          top: auto
+          right: auto
+          transform: rotate(270deg)
+        span.swiper-pagination-bullet
+          background-color: black
+          opacity: 1
+          margin: 7px
+          width: 6px
+          height: 6px
+          transition: all 0.3
+        span.swiper-pagination-bullet-active
+          width: 2px
+          height: 20px
+          border-radius: 0%
+          background-color: $yellow
+
+    .inner
+      font-family: $Basic
+      text-align: left
+      line-height: 1.5
+      +rwdmax(550)
+        line-height: 1
+      h2
+        font-weight: 600
+        font-size: px(100)
+        +rwdmax(1000)
+          font-size: px(54)
+      h4
+        font-weight: 500
+        font-size: px(60)
+        +rwdmax(1000)
+          font-size: px(24)
+        +rwdmax(550)
+          margin-top: 15px
+      &[data-align="center-left"]
+        .bannerContent1
+          position: absolute
+          z-index: 2
+          bottom: 36.11%
+          left: 12.5%
+          width: 710px
+          +rwdmax(1000)
+            width: 450px
+          +rwdmax(550)
+            width: 325px
+            left: 40px
+      &[data-align="center-center"]
+        .bannerContent2
+          position: absolute
+          z-index: 2
+          bottom: 36.11%
+          left: 50%
+          transform: translate(-50%, 0)
+          width: 710px
+          +rwdmax(1000)
+            width: 450px
+          +rwdmax(550)
+            width: 325px
+      &[data-align="center-right"]
+        .bannerContent3
+          position: absolute
+          z-index: 2
+          right: 12.5%
+          bottom: 36.11%
+          transform: translate(0, 0)
+          width: 710px
+          +rwdmax(1000)
+            width: 450px
+          +rwdmax(550)
+            right: 0
+            width: 325px
+          +rwdmax(500)
+            left: 3%
+      &[data-align="bottom-left"]
+        .bannerContent4
+          position: absolute
+          z-index: 2
+          bottom: 12.02%
+          left: 12.5%
+          width: 710px
+          +rwdmax(1000)
+            width: 450px
+          +rwdmax(550)
+            left: 40px
+            width: 325px
+            bottom: 23.61%
+      &[data-align="bottom-center"]
+        .bannerContent5
+          position: absolute
+          z-index: 2
+          bottom: 12.02%
+          left: 50%
+          transform: translate(-50%, 0)
+          width: 710px
+          +rwdmax(1000)
+            width: 450px
+          +rwdmax(550)
+            width: 325px
+            bottom: 23.61%
+      &[data-align="bottom-right"]
+        .bannerContent6
+          position: absolute
+          z-index: 2
+          bottom: 12.02%
+          right: 12.5%
+          width: 710px
+          +rwdmax(1000)
+            width: 450px
+          +rwdmax(550)
+            right: 0
+            width: 325px
+            bottom: 23.61%
+          +rwdmax(500)
+            left: 3%
+  .scroll
+    position: absolute
+    z-index: 1
+    bottom: 14.81%
+    right: calc(6.25% - 5px)
+    display: inline-flex
+    align-items: center
+    writing-mode: vertical-lr
+    +rwdmax(550)
+      display: none
+    p
+      font-size: px(16)      
+      font-weight: 500
+      font-family: $Basic
+      position: relative
+    span
+      display: block
+      width: 1px
+      height: 75px
+      background-color: #000
+      margin-top: 10px
+      overflow: hidden
+      &::before
+        position: relative
+        top: 0
+        transform: translateY(-100%)
+        content: ''
+        display: block
+        width: 1px
+        height: 17px
+        background-color: $yellow        
+        animation: scrollBtn 2s infinite linear
+
+section.news 
+  width: 100%
+  display: flex
+  font-family: $Basic
+  // align-items: center
+  +rwdmax(920)
+    flex-direction: column
+  a.newsLeft
+    max-width: 1280px
+    width: 66.667%
+    background-color: $yellow
+    +rwdmax(1200)
+      width: 60%
+    +rwdmax(920)
+      width: 100%
+    .newsLeftContainer
+      max-width: 810px
+      margin: 0 auto
+      display: flex
+      // flex-wrap: wrap
+      +rwdmax(1366)
+        flex-direction: column 
+        margin-left: 10.6%
+      .newsLeftLeft
+        margin: 57px 0px
+        +rwdmax(1366)
+          margin: 20px 0
+        h4
+          font-weight: 500
+          font-size: 26px
+          line-height: 37.65px
+          +rwdmax(500)
+            font-size: px(20)
+            line-height: 22px
+        h4.newsLeftText
+          font-weight: 600
+          line-height: 28.6px
+          +rwdmax(500)
+            font-size: px(20)
+            line-height: 22px
+      .newsLeftRight
+        display: flex
+        align-items: center
+        font-weight: 500
+        margin-left: 7.65%
+        +rwdmax(1366)
+          margin: 5px 0 20px 0 
+        .newsDate 
+          text-align: center
+          +rwdmax(500)
+            display: flex
+            flex-direction: row
+          p.newsDay 
+            font-size: 26px
+            +rwdmax(500)
+              font-size: px(14)
+          p.newsMonth
+            font-size: 16px
+            +rwdmax(500)
+              font-size: px(14)
+              margin-left: 6px
+        .newsContent
+          width: 310px
+          font-size: 16px
+          margin-left: 21px
+          +ellipsis($line: 1)
+          +rwdmax(550)
+            width: 240px
+          +rwdmax(500)
+            font-size: px(16)
+        .moreBtn
+          font-size: 16px
+          margin-left: 60px
+          +rwdmax(480)
+            display: none
+  a.newsRight
+    width: 33.333%
+    background-color: #ECECEC
+    &:hover
+      .icon-address,.icon-arrow-right
+        color: $yellow
+    +rwdmax(1200)
+      width: 40%
+    +rwdmax(920)
+      width: 100%
+    .newsRightContainer
+      max-width: 350px
+      margin: 0 auto
+      display: flex
+      align-items: center
+      +rwdmax(450)
+        margin-left: 40px
+      .newsRightLeft
+        p.icon-address
+          font-size: 26px
+          transition: color .3s
+      .newsRightCenter
+        margin: 57px 0px
+        margin-left: 40px
+        h4 
+          font-size: 26px
+          font-weight: 500 
+          line-height: 37.65px
+          +rwdmax(500)
+            font-size: px(20)
+            line-height: 28.96px
+        h4.newsRightText
+          font-weight: 600
+          line-height: 28.6px
+          +rwdmax(500)
+            font-size: px(20)
+      .newsRightRight
+        p.icon-arrow-right
+          font-size: px(18)
+          margin-left: 54px
+          transition: color .3s
+
+section.course
+  font-family: $Basic 
+  .courseContainer 
+    display: flex
+    +rwdmax(1023)
+      flex-direction: column
+      overflow: hidden
+    .courseLeft
+      width: 58%
+      position: relative
+
+      +rwdmax(1023)
+        order: 2
+        width: 100%
+      .bg-wrap
+        position: relative
+        width: 100%
+        min-height: 700px
+        padding-bottom: 75.93%
+        pointer-events: none
+        img
+          opacity: 0
+          transition: opacity 0.3s
+          +posCenter
+          object-fit: cover
+          object-position: center
+          width: 100%
+          height: 100%
+          &.show
+            opacity: 1
+      .couseSwiper
+        position: absolute
+        bottom: 20%
+        left: 50%
+        transform: translate(-50%, 0%)  
+        width: 112% 
+        +rwdmax(1023)
+          width: 130%
+          overflow: hidden
+        .swiper
+          .swiper-wrapper
+            padding-top: 100px
+            .swiper-slide-active,.swiper-slide-duplicate-active
+                .inner
+                  margin-top: -100px                    
+                h4 
+                  font-size: 3.65vw
+                  font-weight: 600
+                  line-height: 1.5
+                  +rwdmax(1024)
+                    font-size: px(45)
+                p
+                  font-size: 1.25vw
+                  white-space: nowrap
+                  +rwdmax(1024)
+                    font-size: px(20)
+            .swiper-slide-prev, .swiper-slide-next
+              h4
+                font-size: 3.65vw
+                border-bottom: 9px solid $yellow
+                font-weight: 600
+                line-height: 1.5
+                letter-spacing: 1px
+                color: rgba(0, 0, 0, 0.2)
+                overflow: visible
+                +rwdmax(1199)
+                  font-size: px(45)
+              p
+                display: none
+            .swiper-slide
+              .inner 
+                color: #fff
+                transition: margin-top 0.5s
+
+    .courseRight 
+      width: 42%
+      padding-right: 100px
+      padding-left: 50px
+      margin-top: 190px
+      +rwdmax(1440)
+        padding-right: 50px
+      +rwdmax(1023)
+        width: 100%
+        max-width: 547px
+        margin: 0 auto
+        margin-top: 80px
+        padding: 0 36px
+      +rwdmax(500)
+        width: 100%
+      .courseRightContainer
+        margin: 0 auto
+        +rwdmax(1024)
+          order: 1  
+          margin: 0 auto
+          margin-bottom: 30px
+        .courseTop  
+          width: 100%  
+          h3
+            font-weight: 600
+            font-size: 70px
+            width: 311px
+            margin-bottom: 15px
+            line-height: 1
+            +rwdmax(500)
+              font-size: px(45)
+          h5
+            font-weight: 500
+            font-size: 24px
+            width: 349px
+            margin-bottom: 15px
+            line-height: 1.5
+            +rwdmax(500)
+              font-size: px(20)
+          p 
+            font-weight: 300
+            font-size: 16px
+            // width: 375px
+            margin-bottom: 44px
+            line-height: 1.5
+            +rwdmax(500)
+              font-size: px(16)
+        .category-course
+          margin: 45px auto
+          +rwdmax(1023)
+            margin: 30px auto
+          .category-slider
+            border-bottom: none            
+            .wrapper              
+              .item.active a
+                color: #000
+                &:hover
+                  color: $yellow
+              .item
+                a 
+                  font-weight: 500
+                  font-size: 16px
+                  margin-bottom: 45px
+                  line-height: 1.5
+                  transition: color 0.3s
+                &:hover
+                  color: $yellow
+              .item:not(:first-child)
+                margin-left: 24px
+        .courseButtom
+          +rwdmax(1023)
+            display: none
+          .courseBtn
+            +commonBtn(90px, 90px)
+            display: flex
+            justify-content: center
+            align-items: center
+            transition: all .3s
+            &:hover
+              transform: scale(1.05)
+            p.courseBtn 
+              font-weight: 500
+              font-size: 16px 
+    .courseButtomRWD
+      display: none
+      +rwdmax(1023)
+        display: block
+        order: 3
+        margin: 40px auto
+        margin-bottom: 80px
+      .courseBtn
+        +commonBtn(90px, 90px)
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: all .3s
+        &:hover
+          transform: scale(1.1)
+        p.courseBtn 
+          font-weight: 500
+          font-size: 16px 
+
+section.course2
+  background-color: #2E2E2E
+  .container
+    display: flex
+    max-width: 1600px
+    margin: 0 auto
+    width: 90%
+    padding-bottom: 139px 
+    +rwdmax(1199)
+      flex-direction: column 
+      padding-bottom: 0
+    .course2Left 
+      margin-top: 135px
+      width: 27.5%
+      min-width: 440px
+      +rwdmax(1199)
+        margin: 0 auto
+        margin-top: 80px
+        max-width: 475px
+        width: 100%
+        min-width: auto
+      +rwdmax(500)
+        padding: 0 16px
+      .leftbox
+        position: sticky
+        top: 215px
+        .course2leftTop 
+          color: #fff  
+          h4 
+            font-size: px(70)
+            margin-top: 15px
+            font-family: $Basic
+            font-weight: 600 
+            +rwdmax(570)
+              font-size: px(45)
+          h5 
+            font-size: px(20)
+            font-weight: 500
+            line-height: 1.5
+            margin-top: 15px
+          h6 
+            font-size: px(16)
+            font-weight: 300
+            line-height: 1.5
+            margin-top: 15px
+        .category-course2
+          .category-slider
+            border: none
+            color: #fff
+            margin-top: 50px
+            // width: 300px
+            +rwdmax(1199)
+              margin-top: 30px
+            &::after
+              background: linear-gradient(270deg, #2E2E2E 55%, rgba(46, 46, 46, 0))
+            &::before
+              background: linear-gradient(90deg, #2E2E2E 0%, rgba(46, 46, 46, 0))
+            .wrapper
+              .item.active
+                a
+                  color: #fff
+              .item
+                a
+                  font-size: px(16)
+                  font-weight: 500
+                  line-height: 1.5
+                  transition: color 0.3s
+                a::before
+                  content: "•"
+                  font-size: px(20)  
+                  margin-right: 10px
+                a:hover
+                  color: $yellow                  
+              .item:not(:first-child)
+                margin-left: 24px
+        .course2leftButtom 
+          margin-top: 50px
+          color: #fff  
+          a 
+            font-size: px(16)
+            font-weight: 500
+            line-height: 1.5
+          a:hover
+            color: $yellow
+          a:not(:first-child)
+            margin-left: 24px
+          a::before
+            content: "•"
+            font-size: px(20)  
+            margin-right: 10px
+        .courseBtn 
+          +commonBtn(90px, 90px)
+          display: flex
+          justify-content: center
+          align-items: center
+          margin-top: 45px
+          transition: all .3s
+          &:hover
+            transform: scale(1.1)
+          +rwdmax(1199)
+            display: none
+          p 
+            font-weight: 500
+            font-size: 16px 
+    .course2right
+      width: calc(75% - 7.5%)
+      margin-left: auto
+      +rwdmax(1199)
+        margin: 0 auto
+        width: 100%
+      .rightbox
+        margin-top: 215px
+        display: flex
+        flex-wrap: wrap 
+        +rwdmax(1199)
+          margin-top: 0px
+        +rwdmax(769)
+          flex-direction: column
+          margin-top: 0px
+        .imgContainer
+          width: 50%
+          margin-top: 40px
+          padding: 0 20px
+          +rwdmax(1199)
+            margin-top: 40px
+          +rwdmax(769)
+            width: 100%
+            margin-top: 30px
+            padding: 0
+          a
+            position: relative
+            z-index: 1
+            display: block
+            max-width: 500px
+            width: 100%
+            +rwdmax(769)
+              margin: 0 auto
+            &:hover
+              .imgbox
+                &::before
+                  opacity: 1
+              .imgText
+                bottom: 50%
+                transform: translate(-50%, 50%)
+                color: #000
+            .imgbox
+              position: relative
+              z-index: -1
+              &::before
+                position: absolute
+                z-index: 1
+                content: ''
+                top: 0
+                left: 0
+                display: block
+                width: 100%
+                height: 100%
+                background-color: rgba($yellow, .75)
+                opacity: 0
+                transition: .6s
+              .imgWrap
+                padding-bottom: 100%
+                img
+                  position: absolute
+                  width: 100%
+                  height: 100%
+                  object-fit: cover
+            .imgText
+              position: absolute
+              z-index: 1
+              bottom: 0
+              left: 50%
+              transform: translate(-50%, 0)
+              color: #fff
+              padding: 22px
+              text-align: center
+              transition: bottom .6s, transform .6s
+              h4
+                font-size: px(36) 
+                font-weight: 500
+                font-family: $Basic
+                line-height: 1.5
+              p  
+                font-size: px(20)
+                font-weight: 500
+                line-height: 1.5 
+      .imgContainer:nth-child(2)
+        margin-top: 128px
+        +rwdmax(1199)
+          margin-top: 40px
+      .imgContainer:nth-child(3)
+        margin-top: -48px
+        +rwdmax(1199)
+          margin-top: 40px
+    .courseBtnRWD
+      +commonBtn(90px, 90px)
+      margin: 0 auto
+      margin-top: 30px
+      text-align: center  
+      display: none
+      transition: all .3s
+      &:hover
+        transform: scale(1.1)
+      +rwdmax(1199)
+        display: block
+        margin-bottom: 80px
+      p 
+        font-weight: 500
+        font-size: 16px 
+        transform: translateY(38px)  
+
+section.article
+  .container 
+    display: flex
+    flex-wrap: wrap
+    padding-bottom: 160px
+    max-width: 1340px
+    margin: 0 auto
+    width: 90%
+    +rwdmax(1440)
+      width: 80%
+      padding-bottom: 80px
+    .articleTop 
+      display: flex      
+      margin-top: 174px
+      +rwdmax(1200)
+        flex-direction: column
+        margin: 0 auto
+        margin-top: 80px
+        padding-bottom: 30px
+        max-width: 475px
+        width: 90%
+      +rwdmax(575)
+        margin: 0
+        margin-top: 80px
+      +rwdmax(375)
+        margin: 0
+        width: 100%
+        margin-top: 80px
+      .left
+        h4
+          font-family: $Basic 
+          font-weight: 600
+          font-size: px(70)
+          +rwdmax(575)
+            font-size: px(45)
+      .center
+        margin-left: 7.6% 
+        +rwdmax(1200)
+          min-width: 600px 
+        +rwdmax(1200)
+          margin-top: 30px
+          margin-left: 0
+          min-width: 640px
+        +rwdmax(1000)
+          margin-top: 15px
+          margin-left: 0
+        +rwdmax(767)
+          min-width: 300px
+        +rwdmax(500)
+          max-width: 350px
+        +rwdmax(450)
+          max-width: 300px
+        .centerTop 
+          line-height: 1.5
+          h5 
+            font-weight: 500
+            font-size: px(24)
+            letter-spacing: 1.2
+            +rwdmax(575)
+              font-size: px(20)
+          p 
+            font-weight: 300
+            font-size: px(16)
+            margin-top: 15px
+            +rwdmax(575)
+              font-size: px(16)
+        .centerButtom
+          margin-top: 50px
+          +rwdmax(1200)
+            margin-top: 30px
+          .category-article
+            .category-slider
+              border: none
+              width: 400px
+              .wrapper
+                .item.active
+                  a
+                    color: #000
+                .item
+                  a
+                    transition: color 0.3s
+                  a:before
+                    content: "•"
+                    font-size: px(20)  
+                    margin-right: 10px
+                  a:hover
+                    color: $yellow
+                .item:not(:first-child)
+                    margin-left: 24px
+      .right
+        margin-left: 9%
+        +rwdmax(1500)
+          margin-left: 6%
+        +rwdmax(1439)
+          display: none
+        .moreBtn
+          +commonBtn(90px, 90px)
+          display: flex
+          justify-content: center
+          align-items: center
+          transition: all .3s
+          &:hover
+            transform: scale(1.1)
+          p 
+            font-weight: 500
+            font-size: 16px 
+    .articleButtom
+      display: flex
+      width: 100%
+      margin-top: 3%
+      +rwdmax(1200)
+        flex-direction: column
+        margin-top: 0px
+      .left
+        // width: 28.46%
+        width: 27.61%
+        +rwdmax(1200)
+          order: 2
+          display: flex
+          margin-top: 40px
+          width: 100%
+        +rwdmax(767)
+          flex-direction: column
+        .buttomArticle
+          margin-top: 12%
+          +rwdmax(1200)
+            margin-top: 0
+            margin-left: 40px
+          +rwdmax(767)
+            margin-top: 40px
+            margin-left: 0
+        .topArticle,.buttomArticle
+          +rwdmax(1200)
+            width: calc(50% - 20px)
+          +rwdmax(767)
+            width: 100%
+          .articleContainer
+            a.imgContainer
+              position: relative
+              z-index: 1
+              transition: all 0.3s 
+              &:hover                
+                .imgBox 
+                  &::before
+                    opacity: 1
+                  .hoverText
+                    .hoverWrap
+                      transform: translateY(0)
+                      opacity: 1
+                .textContainer
+                  opacity: 0
+              .imgBox    
+                position: relative
+                z-index: -1
+                &::before
+                  content: ""
+                  display: block
+                  position: absolute
+                  z-index: 1
+                  background-color: rgba($yellow, 0.75) 
+                  width: 100%
+                  height: 100%  
+                  opacity: 0
+                  transition: opacity 0.6s    
+                .imgWrap
+                  position: relative
+                  z-index: -1
+                  padding-bottom: 72.97%
+                  img
+                    position: absolute
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+                .hoverText
+                  position: absolute
+                  z-index: 1
+                  bottom: 0
+                  color: #000 
+                  bottom: 50%
+                  left: 50%
+                  transform: translate(-50%, 50%)
+                  text-align: center                  
+                  line-height: 1.5                
+                  .hoverWrap
+                    transition: transform .3s
+                    transform: translateY(50px)
+                    opacity: 0
+                  h4
+                    font-family: $Basic
+                    font-size: px(36)
+                    font-weight: 800
+                    line-height: 1.5
+                    white-space: nowrap
+                  p
+                    text-align: left
+                    width: 285px
+                    font-weight: 500
+                    font-size: px(14)
+
+              .textContainer
+                color: #fff
+                font-size: px(16)
+                position: relative
+                opacity: 1
+                .text
+                  position: absolute
+                  bottom: 0
+                  padding-bottom: 17px 
+                  color: #fff
+                  font-size: px(12)
+                  font-weight: 500
+                  white-space: nowrap
+                  &[data-align="left"]
+                    left: 10%
+                  &[data-align="center"]
+                    left: 50%
+                    transform: translate(-50%, 0)
+                    display: flex
+                    .viewed
+                      display: flex
+                      margin-left: 4px
+                      p
+                        margin-left: 6px                    
+                  &[data-align="right"]  
+                    right: 5.4%
+                    display: flex
+                    color: #000
+                    .viewed
+                      display: flex
+                      margin-left: 4px
+                      p
+                        margin-left: 6px  
+
+            .articalTitle 
+              h4
+                font-weight: 500
+                font-size: px(18)
+                margin-top: 15px
+                line-height: 1.5
+            .classification
+              display: none
+              +rwdmax(767)
+                display: block
+              .textbox
+                align-items: center
+                margin-top: 10px
+                display: flex
+                .inner 
+                  display: flex
+                  h6 
+                    font-family: $Basic
+                    font-weight: 600
+                    font-size: px(16)                  
+                  p
+                    font-weight: 500
+                    font-size: px(16)
+                  p::before
+                    content: ""
+                    border-left: 2px solid $yellow
+                    margin: 10px
+                .viewNum
+                  display: flex
+                  margin-left: 10px
+                  margin-left: auto
+                  h6,p
+                    font-family: $Basic
+                    font-weight: 600
+                    font-size: px(12)
+                  p
+                    margin-left: 5px       
+  
+      .right
+        margin-left: 3.74%
+        width: 68.65%
+        // width: 71.54%
+        +rwdmax(1200)
+          order: 1
+          width: 100%
+          margin-left: 0
+        .articalContainer
+          a.imgContainer
+            position: relative
+            z-index: 1
+            &:hover
+              .imgBox 
+                &::before
+                  opacity: 1
+                .hoverText
+                  .hoverWrap
+                    transform: translateY(0)
+                    opacity: 1
+              .textContainer
+                opacity: 0            
+            .imgBox
+              position: relative
+              z-index: -1
+              &::before
+                content: ""
+                display: block
+                position: absolute
+                z-index: 1
+                background-color: rgba($yellow, 0.75) 
+                width: 100%
+                height: 100%  
+                opacity: 0
+                transition: opacity 0.6s    
+              .imgWrap
+                position: relative
+                z-index: -1
+                padding-bottom: 67.06%                
+                img
+                  position: absolute
+                  width: 100%
+                  height: 100%
+              .hoverText
+                position: absolute
+                z-index: 1
+                bottom: 0
+                color: #000 
+                bottom: 50%
+                left: 50%
+                transform: translate(-50%, 50%)
+                text-align: center                
+                .hoverWrap
+                  opacity: 0
+                  transform: translateY(100px)
+                  transition: all .3s
+                h4
+                  font-size: px(36)
+                  font-weight: 800
+                  line-height: 1.5
+                  white-space: nowrap
+                p
+                  font-family: $Basic
+                  font-weight: 500
+                  font-size: px(14)
+                  line-height: 1.5
+                .playBtn
+                  display: flex
+                  justify-content: center
+                  margin-top: 20px
+                  p
+                    font-size: px(16)
+                    font-weight: 600
+                  p:not(:first-child)
+                    margin-left: 10px
+            .viewed 
+              display: none
+              width: 112px
+              height: auto
+              background-color: $yellow
+              position: absolute
+              right: -24px
+              bottom: 0
+              margin: 12px
+              .viewedBox
+                font-family: $Basic
+                font-weight: 500
+                width: 73px
+                padding: 3px 19px
+                line-height: 1.2
+                h5
+                  font-size: px(30)
+                p 
+                  font-size: px(12) 
+          .titleContainer
+            display: flex
+            margin-top: 16px
+            +rwdmax(767)
+              flex-direction: column
+              margin-top: 15px
+            .articalTitle
+              h4 
+                font-weight: 500
+                font-size: px(18)
+                line-height: 1.5
+            .classification
+              display: flex
+              flex-wrap: wrap
+              margin-left: auto
+              +rwdmax(767)
+                margin-left: 0
+                margin-top: 10px
+              h6 
+                font-family: $Basic
+                font-weight: 600
+                font-size: px(16)                 
+              p
+                font-weight: 500
+                font-size: px(16)
+              p::before
+                content: ""
+                border-left: 2px solid $yellow
+                margin: 10px 
+    .moreBtnRWD
+      +commonBtn(90px, 90px)
+      margin: 0 auto
+      display: none
+      text-align: center
+      margin-top: 40px
+      transition: all .3s
+      &:hover
+        transform: scale(1.1)
+      +rwdmax(1439)
+        display: block
+      p 
+        font-weight: 500
+        font-size: 16px
+        line-height: 90px  
+
+section.shop 
+  .container
+    display: flex
+    width: 100%
+    +rwdmax(1199)
+      margin-bottom: 80px
+    +rwdmax(600)
+      margin-bottom: 0px
+    img
+      position: relative
+      z-index: -1
+    +rwdmax(1199)
+      flex-direction: column
+    .left
+      width: 33.33%
+      +rwdmax(1199)
+        max-width: 600px
+        width: 100%
+        margin: 0 auto
+      +rwdmax(575)
+        min-width: 375px
+      .leftContainer
+        a.imgContainer
+          position: relative
+          display: block          
+          .imgWrap
+            .imgbox
+              position: relative
+              padding-bottom: 59.375%
+              img
+                position: absolute
+                width: 100%
+                height: 100%
+                object-fit: cover
+          .contentContainer
+            position: absolute
+            line-height: 1.5
+            font-weight: 500
+            bottom: 50%
+            left: 12.5%
+            transform: translate(0, 50%)
+            color: #fff
+            width: 250px
+            +rwdmax(575)
+              width: 190px
+              left: 10%
+            .leftContainer
+              &[data-align="left"]
+                h4.en-title
+                  font-size: px(50)
+                  font-weight: 800
+                  white-space: nowrap
+                  display: none
+                h4.ch-title
+                  font-size: px(26)
+                  letter-spacing: 2.2px
+                  font-weight: 600
+                  +rwdmax(1024)
+                    font-size: px(20)
+                p
+                  font-size: px(16)
+                  font-weight: 500
+                  letter-spacing: 1.2px
+                  margin-top: 10px
+                  &:last-child
+                    color: $yellow
+                            
+    .center
+      width: 33.33%
+      +rwdmax(1199)
+        max-width: 600px
+        width: 100%
+        margin: 0 auto
+      .centerContainer
+        a.imgContainer
+          position: relative
+          display: block          
+          .imgWrap
+            .imgbox
+              position: relative
+              padding-bottom: 59.375%
+              img
+                position: absolute
+                width: 100%
+                height: 100%
+          .contentContainer
+            position: absolute
+            line-height: 1.5
+            font-weight: 500
+            text-align: center
+            bottom: 50%
+            left: 50%
+            transform: translate(-50%, 50%)
+            color: #fff
+            width: 340px
+            +rwdmax(575)
+              width: 300px
+            .centerContainer
+              &[data-align="center"]
+                h4.en-title
+                  font-size: px(50)
+                  font-weight: 800
+                  white-space: nowrap
+                  color: $yellow
+                  letter-spacing: 2.2px
+                  +rwdmax(575)
+                    font-size: px(34)
+                h4.ch-title
+                  font-size: px(26)
+                  display: none
+                p
+                  font-size: px(16)
+                  width: 250px
+                  margin: 0 auto
+                 
+    .right
+      width: 33.33%
+      +rwdmax(1199)
+        max-width: 600px
+        width: 100%
+        margin: 0 auto
+      +rwdmax(575)
+        min-width: 375px
+      .rightContainer
+        a.imgContainer
+          position: relative
+          display: block
+          .imgWrap
+            .imgbox
+              position: relative
+              padding-bottom: 59.375%
+              img
+                position: absolute
+                width: 100%
+                height: 100%
+          .contentContainer
+            position: absolute
+            line-height: 1.5
+            font-weight: 500
+            bottom: 50%
+            right: 9%
+            transform: translate(0, 50%)
+            color: #000
+            width: 250px
+            +rwdmax(575)
+              width: 190px
+              right: 7%
+            .rightContainer
+              &[data-align="right"]
+                h4.en-title
+                  font-size: px(50)
+                  font-weight: 800
+                  white-space: nowrap
+                  display: none
+                  letter-spacing: 2.2px
+                h4.ch-title
+                  font-size: px(26)
+                  letter-spacing: 2.2px
+                p
+                  font-size: px(16)
+                  font-weight: 500
+                  letter-spacing: 1.2px
+
+section.location
+  position: relative
+  .section-bg
+    position: absolute
+    left: 0
+    top: 0
+    z-index: -1
+    width: 100%
+    height: 100%
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: center
+      +rwdmax(1000)
+        object-position: bottom center
+  .container
+    .innerContainer
+      display: flex
+      max-width: 1430px
+      width: 90%
+      margin: 0 auto
+      padding-top: 180px
+      color: #fff
+      letter-spacing: 1.2px
+      +rwdmax(1440)
+        padding-top: 150px
+      +rwdmax(1000)
+        flex-direction: column
+        max-width: 600px
+        width: 90%
+      +rwdmax(600)
+        width: 80%
+      .left 
+        width: 56.29%
+        padding-bottom: 35px
+        padding-right: 10.13%
+        border-right: 1px solid rgba(#fff, 0.3)
+        margin-right: 10.13%
+        margin-bottom: 180px
+        +rwdmax(1440)
+          margin-right: 8%
+          padding-right: 8%
+          margin-bottom: 150px
+        +rwdmax(1200)
+          margin-bottom: 100px
+          width: 50%
+        +rwdmax(1199)
+          margin-right: 3%
+          padding-right: 3%
+        +rwdmax(1000)
+          border: none
+          border-bottom: 1px solid rgba(#fff, 0.3)
+          margin: 0 auto
+          padding-right: 0
+          padding-bottom: 40px
+          margin-bottom: 40px
+          width: 100%
+        .content
+          .header 
+            h5 
+              font-family: $Basic
+              font-weight: 600
+              font-size: px(70)
+              color: $yellow
+              letter-spacing: 1.2
+              +rwdmax(1280)
+                font-size: px(60)
+              +rwdmax(1199)
+                font-size: px(50)
+              +rwdmax(600)
+                font-size: px(45)
+                white-space: nowrap
+              &::after
+                content: " Locations"
+                color: #fff
+          .title 
+            margin-top: 15px
+            p.memberNum
+              font-family: $Basic
+              font-weight: 500
+              font-size: px(24)
+              color: $yellow
+              line-height: 1.5
+              +rwdmax(1280)
+                font-size: px(20)
+              &::before
+                content: "擁有"
+                color: #fff
+              &::after
+                content: "會員數"
+                color: #fff
+            p 
+              font-family: $Basic
+              font-weight: 500
+              font-size: px(24)
+              line-height: 1.5
+              +rwdmax(1280)
+                font-size: px(20)
+          .text
+            margin-top: 15px
+            p 
+              font-weight: 300
+              font-size: px(16)
+              line-height: 1.5
+          .selectContainer 
+            display: flex
+            margin-top: 30px
+            margin-left: 0
+            +rwdmax(600)
+              flex-direction: column
+            .wdd-form 
+              max-width: none
+              padding: 0
+              .form-group    
+                +rwdmax(600)
+                  flex-direction: column             
+                .form-select.city, .form-select.dist
+                  border-bottom: 3px solid $yellow               
+                  .selected
+                    color: #fff
+                  span.arrow-icon
+                    border-color: #fff transparent transparent transparent
+                .dropdown
+                  ul
+                    color: #000
+                .form-select.dist
+                  margin-left: 10px
+                  +rwdmax(600)
+                    margin-left: 0
+                    margin-top: 20px
+            .search
+              width: 50px
+              height: 50px
+              border-radius: 50%
+              background-color: #000 
+              position: relative
+              margin-left: 30px
+              flex-shrink: 0
+              +rwdmax(600)
+                margin: 0 auto
+                margin-top: 30px
+              p.icon-searcher
+                +posCenter
+                color: $yellow
+                position: absolute     
+      .right
+        width: 43.7%
+        +rwdmax(1000)
+          width: 100%
+          margin-bottom: 110px
+        .content 
+          font-family: $Basic
+          font-weight: 600
+          h5 
+            font-size: px(20)
+          .countDown 
+            margin-top: 10px
+            font-size: px(100)
+            display: flex
+            +rwdmax(1700)
+              font-size: px(80)
+            +rwdmax(1400)
+              font-size: px(70)
+            +rwdmax(1199)
+              font-size: px(60)
+            +rwdmax(600)
+              font-size: px(48)
+            .day,.hours,.min,.sec
+              text-align: right
+              display: flex
+              .text
+                width: 135px
+                +rwdmax(1600)
+                  width: 105px
+                +rwdmax(1366)
+                  width: 90px
+                +rwdmax(1100)
+                  width: 80px
+                +rwdmax(600)
+                  width: 60px
+                h4
+                p 
+                  font-size: px(20)
+                  margin-top: 10px
+                  +rwdmax(600)
+                    font-size: px(12)
+            .day
+              h4
+              &::after
+                content: ""
+                height: 30px
+                width: 2px
+                background-color: rgba(#fff, 0.3)
+                margin-left: 30px
+                margin-top: 40px                
+                +rwdmax(1440)
+                  margin-top: 30px
+                  margin-right: 15px
+                +rwdmax(600)
+                  height: 15px
+                  font-size: px(20)
+                  margin: 0 15px
+                  margin-top: 20px
+            .hours,.min
+              &::after
+                content: ":"
+                margin: 0 10px
+                +rwdmax(600)
+                  margin: 0 5px
+        .spotInfo
+          display: flex
+          align-items: center
+          margin-top: 40px
+          +rwdmax(470)
+            flex-direction: column
+            align-items: flex-start
+          .spotName
+            color: $yellow
+            font-size: px(30) 
+            font-weight: 500
+            +rwdmax(470)
+              font-size: px(20)
+            &::after
+              content: ""
+              border-left: 2px solid $yellow
+              margin-left: 30px
+              +rwdmax(1100)
+                margin-left: 15px
+          .address 
+            margin-left: 30px
+            +rwdmax(1100)
+              margin-left: 15px
+            +rwdmax(470)
+              margin-left: 0
+              margin-top: 10px
+            p 
+              font-size: px(16)
+              line-height: 1.5
+              font-weight: 300
+              
+        .category-spot
+          margin-top: 50px
+          +rwdmax(470)
+            margin-top: 30px
+          .spotSwiper
+            .swiper-wrapper
+              transform: translate3d(0px, 0px, 0px)
+              .swiper-slide
+                .item
+                  &:not(:first-child)
+                    margin-left: 45px
+                  &:hover
+                    p
+                      color: #fff
+                      // font-size: px(18)
+                  &:not(:first-child)
+                    margin-left: 50px                
+                  .top
+                    font-size: px(12)
+                    white-space: nowrap
+                  p
+                    font-size: px(16)
+                    font-weight: 500
+                    color: rgba(#fff, 0.5)
+                    line-height: 1.5
+                    transition: all 0.3s
+                    white-space: nowrap
+                  
+                  p:last-child
+                    margin-top: 5px
+                // .swiper-slide.active
+                //   & + .swiper-slide + .swiper-slide
+                //     p
+                //       color: #fff
+                //       line-height: 1.5
+                //       font-size: px(18)
+        .spot-pagination
+          margin-top: 30px 
+          display: flex
+          align-items: center
+          .swiper-pagination-bullet
+            background-color: black
+            opacity: 1
+            margin: 7px
+            width: 6px
+            height: 6px
+          .swiper-pagination-bullet-active
+            width: 25px
+            height: 2px
+            background-color: $yellow
+
+section.promotion 
+  .container
+    display: flex
+    font-weight: 300
+    letter-spacing: 1.2px
+    line-height: 1.5
+    +rwdmax(1000)
+      flex-direction: column 
+    .left
+      width: 33.33% 
+      background-color: #313131
+      color: #fff
+      +rwdmax(1440)
+        width: 40% 
+      +rwdmax(1000)
+        width: 100%       
+      .leftbox 
+        max-width: 420px  
+        display: flex 
+        margin: 100px auto 
+        width: 85%
+        +rwdmax(1366)
+          margin: 70px auto
+        +rwdmax(1000)
+          max-width: 600px
+          width: 80%
+          justify-content: center
+          margin: 80px auto
+        .date
+          font-weight: 600
+          line-height: 1
+          h4 
+            color: $yellow            
+            font-size: px(124)
+          h6 
+            color: #848484
+            font-size: px(28)
+            margin-top: 10px
+        .trail
+          font-size: px(26)
+          margin-left: 10.71% 
+          +rwdmax(1152)
+            font-size: px(20)
+          h4 
+            font-weight: 600
+          h5 
+            font-weight: 500
+            margin-top: 10px
+          p 
+            font-size: px(16)
+            margin-top: 10px
+          a 
+            font-size: px(16)
+            color: $yellow
+            margin-top: 15px
+            transition: all .3s
+            &:hover
+              font-size: px(18)
+    .right 
+      width: 66.66%
+      background-color: #E9E9E9 
+      display: flex
+      align-items: flex-end
+      +rwdmax(1440)
+        width: 60% 
+      +rwdmax(1000)
+        width: 100%    
+      .rightbox
+        max-width: 790px
+        width: 90%
+        margin: 0 auto
+        display: flex
+        margin-top: 78px
+        align-items: flex-end 
+        +rwdmax(670)
+          flex-direction: column
+          align-items: center
+        .pic
+          width: 280px
+          +rwdmax(1440)
+            width: 250px
+          +rwdmax(1200)
+            width: 220px
+          +rwdmax(670)
+            order: 2
+          .imgbox
+            width: 100%
+            padding-bottom: 111.42%
+            position: relative
+            img
+              position: absolute
+              z-index: 1
+              object-fit: contain
+              width: 100%
+              height: 100%              
+        .content
+          margin-left: 13.92%
+          flex: 1
+          margin-bottom: 70px
+          +rwdmax(1440)
+            margin-bottom: 40px
+            margin-left: 10%
+          +rwdmax(1366)
+            margin-left: 6%
+          .text
+            font-size: px(16)
+            h4 
+              font-size: px(24)
+              font-weight: 600
+              +rwdmax(1152)
+                font-size: px(20)
+            h5 
+              font-weight: 500
+              font-size: px(24)
+              margin-top: 10px
+              +rwdmax(1270)
+                margin-top: 0px
+              +rwdmax(1152)
+                font-size: px(20)
+            p 
+              margin-top: 10px
+              +rwdmax(1200)
+                margin-top: 0px           
+            a
+              font-weight: 500
+              margin-top: 20px
+              display: block
+              transition: all .3s
+              &:hover
+                font-size: px(18)
+          .download 
+            margin-top: 33px
+            display: flex
+            +rwdmax(1440)
+              margin-top: 15px
+            +rwdmax(1150)
+              margin-top: 10px
+            +rwdmax(1000)
+              padding-bottom: 0px
+            .imgbox
+              width: 110px
+              &:last-child
+                margin-left: 15px
+              img 
+                width: 100%
+                height: 100%

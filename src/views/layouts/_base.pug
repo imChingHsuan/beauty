@@ -1,0 +1,34 @@
+block page
+  - var page = page ? page : '';
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no")
+    // Safari 電話號碼判斷
+    meta(content="telephone=no" name="format-detection")
+    title  Fitness Factory
+    link(rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon")
+    link(rel="stylesheet", href=`./assets/fonts/icomoon/style.css`)
+    link(rel="stylesheet", href=`./css/style.css`)
+    link(rel="stylesheet", href=`./css/pages/${page}.css`)
+  body(class= page)
+    h1.visuallyhidden Fitness Factory
+    .main-wrapper
+      // 導覽列
+      block navbar
+        include ./_navbar.pug
+
+      // 主要內容
+      main
+        block content
+      
+      // 頁腳
+      block footer
+        include ./_footer.pug
+    
+    // script
+    script(src="./js/static/jquery-3.6.0.min.js")
+    script(src="./js/static/fesdDB.1.0.min.js")
+    script(src="./js/common.min.js")
+    script(src=`./js/pages/${page}.min.js`)
